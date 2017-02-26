@@ -1,11 +1,3 @@
-//
-//  Qif.h
-//  Qif
-//
-//  Created by Juan Pablo Villa on 2/18/17.
-//  Copyright © 2017 gianpamx.github.io. All rights reserved.
-//
-
 #import <Cocoa/Cocoa.h>
 
 //! Project version number for Qif.

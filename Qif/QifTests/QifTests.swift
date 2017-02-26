@@ -2,9 +2,11 @@ import XCTest
 @testable import Qif
 
 class QifTests: XCTestCase {
-    func testExample() {
-        let qif = Qif()
-        qif.setB(value: true)
-        XCTAssertTrue(qif.getB())
+    func testInitializeWithFile() {
+        let fakeStreamReader = FakeStreamReader()
+        
+        _ = Qif(fromFile : "file.qif", streamReader : fakeStreamReader)
+        
+        XCTAssertTrue(fakeStreamReader.openWasCalled())
     }
 }

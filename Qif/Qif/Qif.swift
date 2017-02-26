@@ -1,15 +1,9 @@
 public class Qif {
-    private var b : Bool
-    
-    public init() {
-        b = false
+    public convenience init(fromFile filename : String) {
+        self.init(fromFile : filename, streamReader : StreamReaderImpl())
     }
     
-    public func getB() -> Bool {
-        return b
-    }
-    
-    public func setB(value :Bool) {
-        b = value
+    public init(fromFile filename : String, streamReader : StreamReader) {
+        streamReader.open(path: filename, delimiter: "\n")
     }
 }

@@ -11,6 +11,9 @@
 		6E1BF1A01E595F9F004C08A2 /* QifTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1BF19F1E595F9F004C08A2 /* QifTests.swift */; };
 		6E1BF1A21E595F9F004C08A2 /* Qif.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E1BF1941E595F9F004C08A2 /* Qif.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E1BF1AC1E595FC5004C08A2 /* Qif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1BF1AB1E595FC5004C08A2 /* Qif.swift */; };
+		6E1BF1D71E596536004C08A2 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1BF1D61E596536004C08A2 /* StreamReader.swift */; };
+		6E1BF1D91E59655C004C08A2 /* StreamReaderImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1BF1D81E59655C004C08A2 /* StreamReaderImpl.swift */; };
+		6E1BF1DC1E5965F3004C08A2 /* FakeStreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1BF1DB1E5965F3004C08A2 /* FakeStreamReader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +34,9 @@
 		6E1BF19F1E595F9F004C08A2 /* QifTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QifTests.swift; sourceTree = "<group>"; };
 		6E1BF1A11E595F9F004C08A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E1BF1AB1E595FC5004C08A2 /* Qif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Qif.swift; sourceTree = "<group>"; };
+		6E1BF1D61E596536004C08A2 /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreamReader.swift; path = StreamReader/StreamReader.swift; sourceTree = "<group>"; };
+		6E1BF1D81E59655C004C08A2 /* StreamReaderImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreamReaderImpl.swift; path = StreamReader/StreamReaderImpl.swift; sourceTree = "<group>"; };
+		6E1BF1DB1E5965F3004C08A2 /* FakeStreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FakeStreamReader.swift; path = FakeStreamReader/FakeStreamReader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 		6E1BF1931E595F9F004C08A2 /* Qif */ = {
 			isa = PBXGroup;
 			children = (
+				6E1BF1D51E59651A004C08A2 /* StreamReader */,
 				6E1BF1941E595F9F004C08A2 /* Qif.h */,
 				6E1BF1951E595F9F004C08A2 /* Info.plist */,
 				6E1BF1AB1E595FC5004C08A2 /* Qif.swift */,
@@ -83,10 +90,28 @@
 		6E1BF19E1E595F9F004C08A2 /* QifTests */ = {
 			isa = PBXGroup;
 			children = (
+				6E1BF1DA1E5965D7004C08A2 /* StreamReader */,
 				6E1BF19F1E595F9F004C08A2 /* QifTests.swift */,
 				6E1BF1A11E595F9F004C08A2 /* Info.plist */,
 			);
 			path = QifTests;
+			sourceTree = "<group>";
+		};
+		6E1BF1D51E59651A004C08A2 /* StreamReader */ = {
+			isa = PBXGroup;
+			children = (
+				6E1BF1D61E596536004C08A2 /* StreamReader.swift */,
+				6E1BF1D81E59655C004C08A2 /* StreamReaderImpl.swift */,
+			);
+			name = StreamReader;
+			sourceTree = "<group>";
+		};
+		6E1BF1DA1E5965D7004C08A2 /* StreamReader */ = {
+			isa = PBXGroup;
+			children = (
+				6E1BF1DB1E5965F3004C08A2 /* FakeStreamReader.swift */,
+			);
+			name = StreamReader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E1BF1D91E59655C004C08A2 /* StreamReaderImpl.swift in Sources */,
+				6E1BF1D71E596536004C08A2 /* StreamReader.swift in Sources */,
 				6E1BF1AC1E595FC5004C08A2 /* Qif.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E1BF1A01E595F9F004C08A2 /* QifTests.swift in Sources */,
+				6E1BF1DC1E5965F3004C08A2 /* FakeStreamReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +437,7 @@
 				6E1BF1A71E595F9F004C08A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E1BF1A81E595F9F004C08A2 /* Build configuration list for PBXNativeTarget "QifTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +446,7 @@
 				6E1BF1AA1E595F9F004C08A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

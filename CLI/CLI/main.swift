@@ -1,15 +1,9 @@
-//
-//  main.swift
-//  CLI
-//
-//  Created by Juan Pablo Villa on 2/18/17.
-//  Copyright © 2017 gianpamx.github.io. All rights reserved.
-//
-
 import Foundation
 import Qif
 
-let qif = Qif()
-qif.setB(value: true)
-print(qif.getB())
+if (CommandLine.arguments.count < 2) {
+    print("Usage " + CommandLine.arguments[0] + ": filename")
+    exit(1)
+}
 
+let qif = Qif(fromFile:CommandLine.arguments[1])
