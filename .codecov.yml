@@ -1,3 +1,5 @@
 ignore:
   - "Qif/QifTests/"
+  - "Qif/Qif/StreamReader/StreamReaderImpl.swift"
+
 
